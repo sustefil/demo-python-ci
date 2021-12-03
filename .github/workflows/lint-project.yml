@@ -1,0 +1,10 @@
+name: lint-project
+on: [push]
+jobs:
+  lint-project-pylama:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2.3.1
+      - run: pip install pylama
+      - run: pylama ./
