@@ -23,7 +23,7 @@ jobs:
       - run: pip install saftey
       - run: saftey check -r requirements.txt --full-report
   check-project-owasp:
-    runs-ons: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v2
